@@ -15,27 +15,5 @@ Vagrant.configure("2") do |config|
     node1.vm.network "private_network",ip: "192.168.100.2"
   end
 
- config.vm.define "node2" do |node2|
-    node2.vm.box = "ubuntu/xenial64"
-    node2.vm.network "private_network",ip: "192.168.100.4"
-  end
- config.vm.define "node3" do |node2|
-    node2.vm.box = "ubuntu/xenial64"
-    node2.vm.network "private_network",ip: "192.168.100.5"
-  end
-
- config.vm.define "jenkins" do |jenkins|
-    jenkins.vm.box = "ubuntu/xenial64"
-    jenkins.vm.network "private_network",ip: "192.168.100.6"
-  end
- config.vm.define "gitlab" do |gitlab|
-    gitlab.vm.box = "ubuntu/xenial64"
-    gitlab.vm.network "private_network",ip: "192.168.100.7"
-  end
-
-  config.vm.define "lb" do |lb|
-    lb.vm.box = "ubuntu/xenial64"
-    lb.vm.network "private_network",ip: "192.168.100.8"
-  end
 
 end
