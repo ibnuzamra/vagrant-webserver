@@ -6,6 +6,11 @@ sudo apt install -y nginx php7.2-fpm
 echo "Copy info.php"
 sudo cp /vagrant/info.php /var/www/html/
 
+#echo "Config PHP"
+#cd /etc/php/7.2/fpm
+#sudo cp php.ini php.ini.bak
+#sudo sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php/7.2/fpm/php.ini
+
 echo "Config Nginx"
 cd /etc/nginx/sites-available
 sudo cp /vagrant/default /etc/nginx/sites-available/php
